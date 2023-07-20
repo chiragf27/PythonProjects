@@ -1,1 +1,0 @@
-{'Username': 'password', 'admin': '1234', 'chirag': 'chirag@py7', 'atharva': 'athu@1905', 'yashchavan': 'yash@05'}
