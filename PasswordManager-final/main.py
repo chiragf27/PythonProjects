@@ -83,6 +83,7 @@ def signin():
                     finally:
                         website_entry.delete(0, END)
                         password_entry.delete(0, END)
+                        email_entry.delete(0, END)
 
         # ---------------------------- FIND PASSWORD ------------------------------- #
         def find_password():
@@ -109,8 +110,8 @@ def signin():
         screen.configure(bg="#fff")
         screen.resizable(False, False)
 
-        logo_img = PhotoImage(file="logo.png")
-        Label(screen, image=logo_img, width=250, height=250, bg='white').place(x=180, y=5)
+        logo_img = PhotoImage(file="password.png")
+        Label(screen, image=logo_img, width=250, height=250, bg='white').place(x=215, y=5)
 
         frame = Frame(screen, width=500, height=200, bg='white')
         frame.place(x=90, y=230)
@@ -256,7 +257,7 @@ def signup_cmd():
     Frame(frame, width=295, height=2, bg="black").place(x=25, y=207)
 
     Button(frame, width=30, pady=7, text='Sign Up', bg='#57a1f8', fg='white', border=0, font=('SF Pro Display', 11),
-           command=signup).place(x=35, y=250)
+           command=signup, borderwidth=0).place(x=35, y=250)
 
     label = Label(frame, text="Already have an account?", fg='black', bg='white', font=('SF Pro Display', 11))
     label.place(x=40, y=300)
@@ -308,7 +309,7 @@ code.bind('<FocusIn>', on_enter)
 
 Frame(frame, width=295, height=2, bg="black").place(x=25, y=157)
 
-Button(frame, width=30, pady=7, text='Sign In', bg='#57a1f8', fg='white', border=0, font=('SF Pro Display', 11), command=signin).place(x=35, y=185)
+Button(frame, width=30, pady=7, text='Sign In', bg='#57a1f8', fg='white', border=0, font=('SF Pro Display', 11), command=signin, borderwidth=0).place(x=35, y=185)
 label=Label(frame, text="Don't have an account?", fg='black', bg='white', font=('SF Pro Display', 11))
 label.place(x=55, y=240)
 
